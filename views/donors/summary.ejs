@@ -1,0 +1,70 @@
+<%- include('../partials/header') %>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="/stylesheets/style.css">
+</head>
+<body>
+  <div id="edit-donor">
+    <h2>Edit Donor</h2>
+    <form action="/donor/<%=id%>?_method=PUT" method="POST">
+      <label>Name:</label><br />
+      <input type="text" name="name" value="<%=donor.name%>" /><br />
+  <label>Age:</label><br />
+  <input type="number" name="age" value="<%=donor.age%>" /><br />
+    <label>Blood Type:</label><br />
+  <select name="bloodType">
+    <option value="A+" <%=donor.bloodType==='A+' ? 'selected' : '' %>>A+</option>
+    <option value="A-" <%=donor.bloodType==='A-' ? 'selected' : '' %>>A-</option>
+    <option value="B+" <%=donor.bloodType==='B+' ? 'selected' : '' %>>B+</option>
+    <option value="B-" <%=donor.bloodType==='B-' ? 'selected' : '' %>>B-</option>
+    <option value="AB+" <%=donor.bloodType==='AB+' ? 'selected' : '' %>>AB+</option>
+    <option value="AB-" <%=donor.bloodType==='AB-' ? 'selected' : '' %>>AB-</option>
+    <option value="O+" <%=donor.bloodType==='O+' ? 'selected' : '' %>>O+</option>
+    <option value="O-" <%=donor.bloodType==='O-' ? 'selected' : '' %>>O-</option>
+  </select><br />
+    <label>Gender:</label><br />
+  <select name="gender">
+    <option value="Male" <%=donor.gender==='Male' ? 'selected' : '' %>>Male</option>
+    <option value="Female" <%=donor.gender==='Female' ? 'selected' : '' %>>Female</option>
+  </select><br />
+    <button onclick="window.location.href='/donor'">Back to dashboard</button>
+  <button type="submit">Update Donor</button>
+  <br />
+  </form>
+</div>
+<br>
+<div id="add-donation">
+  <h2>Add Donation</h2>
+  <form action="/donor/<%=id%>/donation" method="POST">
+    <label for="amount">Donation Amount:</label><br />
+    <input type="number" name="donation[amount]" placeholder="Between 350mL-450mL"min="350" max="450" required style="width: 15%;" required /><br />
+  <label for="remarks">Remarks:</label><br />
+  <textarea name="donation[remarks]" placeholder="Please enter any additional remarks here..."></textarea><br />
+    <button type="submit">Submit Donation</button>
+  </form>
+</div>
+<br>
+<div id="donations-history">
+  <h2>Donations History</h2>
+  <% donor.donation.forEach((donation)=> { %>
+    <div>
+      <label>Donation Amount: <%= donation.amount %></label><br>
+      <label>Remarks: <%= donation.remarks %></label><br>
+      <label>Created At: <%= donation.createdAt %></label><br>
+      <form action="/donor/<%=id%>/donation/<%=donation._id %>?_method=DELETE" method="POST">
+        <input type="hidden" name="_method" value="DELETE">
+        <button type="submit">Delete Donation</button>
+      </form>
+    </div>
+    <% }); %>
+</div>
+</html>
+
+
+  

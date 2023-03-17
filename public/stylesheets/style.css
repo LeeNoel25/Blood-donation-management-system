@@ -1,0 +1,140 @@
+/* body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+}
+
+header {
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+.greeting {
+    font-size: 32px;
+    color: #444;
+    margin: 40px 0 20px;
+}
+
+h3 {
+    font-size: 24px;
+    color: #666;
+    margin: 20px 0;
+}
+
+nav {
+    margin: 20px 0;
+}
+
+.donor-nav a {
+    display: inline-block;
+    background-color: #fff;
+    color: #444;
+    padding: 10px 20px;
+    border-radius: 4px;
+    text-decoration: none;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: all 0.2s ease-in-out;
+}
+
+.donor-nav a:hover {
+    background-color: #444;
+    color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+nav {
+    text-align: right;
+}
+
+.logout {
+    display: inline-block;
+    background-color: #fff;
+    color: #444;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 20px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.logout:hover {
+    background-color: #444;
+    color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    text-align: center;
+}
+
+.blood-donor-list {
+    margin: 0 auto;
+    border-collapse: collapse;
+    width: 80%;
+    max-width: 800px;
+}
+
+.blood-donor-list th {
+    background-color: #444;
+    color: #fff;
+    padding: 10px;
+    text-align: left;
+}
+
+.blood-donor-list td {
+    padding: 10px;
+    text-align: left;
+}
+
+.blood-donor-list tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.blood-donor-list tr:hover {
+    background-color: #ddd;
+}
+
+.blood-donor-list button {
+    background-color: #fff;
+    color: #444;
+    border: none;
+    border-radius: 4px;
+    padding: 8px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.blood-donor-list button:hover {
+    background-color: #444;
+    color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.blood-donor-list form {
+    display: inline-block;
+}
+
+.form-container {
+    margin: 50px auto 0;
+    text-align: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+form label {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.5rem;
+}
+
+form label input {
+    margin-left: 0.5rem;
+}
+
+form button {
+    margin-top: 1rem;
+} */

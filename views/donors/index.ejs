@@ -1,0 +1,56 @@
+<%- include('../partials/header') %>
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+<body>
+  <h2>Blood Donor List</h2>
+  <div>
+    <a href="/donor/new">Add a New Donor</a>
+  </div>
+  <br />
+  <table id="list" border="1" cellpadding="5">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Age</th>
+        <th>Blood Type</th>
+        <th>Gender</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% donor.forEach(function(donor) { %>
+        <tr>
+          <td>
+            <%= donor.name %>
+          </td>
+          <td>
+            <%= donor.age %>
+          </td>
+          <td>
+            <%= donor.bloodType %>
+          </td>
+          <td>
+            <%= donor.gender %>
+          </td>
+          <td>
+            <form action="/donor/<%=donor._id%>" method="GET">
+              <button type="submit" title="View Donor">Details</button>
+            </form>
+            <form action="/donor/<%=donor._id%>?_method=DELETE" method="POST">
+              <button type="submit" title="Delete Donor">Delete</button>
+            </form>
+          </td>
+        </tr>
+        <% }); %>
+    </tbody>
+  </table>
+</body>
+
+</html>

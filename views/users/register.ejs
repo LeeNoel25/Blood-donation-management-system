@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <link rel="stylesheet" href="/stylesheets/style.css" />
+</head>
+
+<div style="margin: 50px;">
+  <h2>Create New Account</h2>
+
+  <form action="signup" method="post" style="display: flex; flex-direction: column; align-items: flex-start;">
+    <label for="username" style="margin-bottom: 10px;"><b>Username</b></label>
+    <input type="text" name="username" required style="padding: 5px; margin-bottom: 20px;" />
+    <label for="password" style="margin-bottom: 10px;"><b>Password</b></label>
+    <input type="password" name="password" required style="padding: 5px; margin-bottom: 20px;" />
+    <button type="submit" style="padding: 5px; margin-bottom: 20px;">Create Account</button>
+  </form>
+  <a href="/user/login">Back to Sign In</a>
+</div>
+
