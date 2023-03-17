@@ -58,8 +58,7 @@
       <label>Remarks: <%= donation.remarks %></label><br>
       <label>Created At: <%= donation.createdAt %></label><br>
       <form action="/donor/<%=id%>/donation/<%=donation._id %>?_method=DELETE" method="POST">
-        <input type="hidden" name="_method" value="DELETE">
-        <button type="submit">Delete Donation</button>
+      <button type="submit">Delete Donation</button>
       </form>
     </div>
     <% }); %>
