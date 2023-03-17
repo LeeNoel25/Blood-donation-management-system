@@ -8,7 +8,7 @@ const methodOverride = require("method-override");
 const passport = require("passport");
 const bcrypt = require("bcrypt");
 const jwt = require("jsonwebtoken");
-const mongoose = require('mongoose');
+const mongoose = require("mongoose");
 
 require("dotenv").config();
 require("./config/database");
@@ -24,6 +24,18 @@ var app = express();
 app.set("views", path.join(__dirname, "views"));
 app.set("view engine", "ejs");
 app.set("trust proxy", 1);
+
+const sessionStore = MongoStore.create({
+  mongoUrl: process.env.DATABASE_URL,
+  collectionName: "sessions",
+});
+
+app.use(
+  session({
+    //your code
+    store: sessionStore,
+  })
+);
 
 // configure express session
 app.use(
